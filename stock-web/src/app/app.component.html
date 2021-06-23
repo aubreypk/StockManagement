@@ -1,0 +1,43 @@
+<!-- Main App container-->
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">{{ title }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a routerLinkActive="active" routerLink="/list-stockitem" class="nav-link active"  aria-current="page">View Stock</a>
+        </li>
+        <li class="nav-item">
+          <a routerLinkActive="active" routerLink="/create-stockitem" class="nav-link active"  aria-current="page">Add Stock Item</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Logout</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted">by Aubrey Pule Khoza, aubreypk@gmail.com, +27719471569</span>
+  </div>
+</footer>
+
+

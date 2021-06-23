@@ -1,0 +1,82 @@
+<h4 class="">Add Stock Item</h4>
+<form>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group mb-3">
+        <label for="regNumber">Registration Number</label>
+        <input [(ngModel)]="newStockItem.regNumber" type="text" class="form-control" id="regNumber" name="regNumber" placeholder="Registration Number">
+    </div>
+    <div class="form-group mb-3">
+        <label for="make">Make</label>
+        <input [(ngModel)]="newStockItem.make" type="text" class="form-control" id="make" name="make" placeholder="Make">
+    </div>
+    <div class="form-group mb-3">
+        <label for="regNumber">Model</label>
+        <input [(ngModel)]="newStockItem.model" type="text" class="form-control" id="model" name="model" placeholder="Model">
+    </div>
+    <div class="form-group mb-3">
+        <label for="regNumber">Model Year</label>
+        <input [(ngModel)]="newStockItem.modelYear" type="number" class="form-control" id="modelYear" name="modelYear" placeholder="Model Year">
+    </div>
+    <div class="form-group mb-3">
+        <label for="regNumber">Kilometers</label>
+        <input [(ngModel)]="newStockItem.kms" type="number" class="form-control" id="kms" name="kms" placeholder="Kilometers">
+    </div>
+    <div class="form-group mb-3">
+        <label for="regNumber">Colour</label>
+        <input [(ngModel)]="newStockItem.colour" type="text" class="form-control" id="colour" name="colour" placeholder="Colour">
+    </div>
+    <div class="form-group mb-3">
+        <label for="regNumber">Vin Number</label>
+        <input [(ngModel)]="newStockItem.vin" type="text" class="form-control" id="vin" name="vin" placeholder="Vin Number">
+    </div>
+    <div class="form-group mb-3">
+        <label for="retailPrice">Retail Price</label>
+        <input [(ngModel)]="newStockItem.retailPrice" type="number" class="form-control" id="retailPrice" name="retailPrice" placeholder="Retail Price">
+    </div>
+    <div class="form-group mb-3">
+        <label for="costPrice">Cost Price</label>
+        <input [(ngModel)]="newStockItem.costPrice" type="number" class="form-control" id="costPrice" name="costPrice" placeholder="Cost Price">
+    </div>
+      
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Add Stock Item</button>
+
+</div>
+    <div class="col-md-6">
+        <h6 class="mb-6">Images</h6>
+        <div class="form-group mb-3">
+            <label for="image1">Image 1: </label>
+            <input id="image1" name="image1" type="file" (change)="onAddImage($event)" >
+        </div>
+        <div class="form-group mb-3">
+            <label for="image2">Image 2: </label>
+            <input id="image2" name="image2" type="file" (change)="onAddImage($event)" >
+        </div>
+        <div class="form-group mb-3">
+            <label for="image1">Image 3: </label>
+            <input id="image1" name="image1" type="file" (change)="onAddImage($event)" >
+        </div>
+
+        <h6 class="mb-6">Accessories</h6>
+        <div class="form-group mb-3">
+            <label for="accessoryName">Accessory Name</label>
+            <input [(ngModel)]="accessoryName" type="text" class="form-control" id="accessoryName" name="accessoryName" placeholder="Accessory Name">
+        </div>
+        <div class="form-group mb-3">
+            <label for="accessoryDescription">Accessory Description</label>
+            <input [(ngModel)]="accessoryDescription" type="text" class="form-control" id="accessoryDescription" name="accessoryDescription" placeholder="Accessory Description">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onAddAccessory()">Add Accessory</button>
+        <div class="list-group mt-3">
+            <span class="list-group-item list-group-item-action flex-column align-items-start ">
+              <p class="mb-1">Test Accessory</p>
+              <small>Description</small>
+            </span>
+            <span *ngFor="let accessory of newStockItem.accessories" class="list-group-item list-group-item-action flex-column align-items-start ">
+                <p class="mb-1">{{accessory.name}}</p>
+                <small>{{accessory.description}}</small>
+              </span>
+        </div>
+    </div>
+</div>
+</form>
