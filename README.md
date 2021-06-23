@@ -3,7 +3,7 @@
 ## An application to manage a dealership’s stock-on-hand
 
 ### DATABASE: (stockDB)
-####MongoDB
+MongoDB
 
 ### API: (stock-api project)
 #### Nodejs, Express back-end api
